@@ -21,10 +21,10 @@ function createtime() {
     var hatsuneMikuDays = Math.floor((now - hatsuneMikuDebute) / (1000 * 60 * 60 * 24));
     
     // 原有逻辑保持不变
-    var e = new Date("08/01/2022 00:00:00"),
+    var e = new Date("06/17/2025 16:43:27"),
         t = Math.trunc(23400000000 + (now - e) / 1000 * 17),
         a = (t / 1496000000).toFixed(6),
-        o = new Date("08/09/2022 00:00:00"),
+        o = new Date("06/17/2025 16:43:27"),
         n = (now - o) / 1000 / 60 / 60 / 24,
         r = Math.floor(n),
         i = (now - o) / 1000 / 60 / 60 - 24 * r,
