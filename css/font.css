@@ -2,10 +2,6 @@
     
     font-family: 'AaGuDianKeBenSong';/*字体名称,建议英文*/
     font-display: swap;
-    src: url('/fonts/AaGuDianKeBenSong-2.ttf');  
-    src: url('/fonts/AaGuDianKeBenSong-2.ttf') format('embedded-opentype'),  /* IE6-IE8 */
-         url('/fonts/AaGuDianKeBenSong-2.ttf') format('woff2'),
-         url('/fonts/AaGuDianKeBenSong-2.ttf') format('woff'),  /*chrome、firefox */
-         url('/fonts/AaGuDianKeBenSong-2.ttf') format('truetype'),  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-         url('/fonts/AaGuDianKeBenSong-2.ttf') format('svg');  
+    src: url('/fonts/AaGuDianKeBenSong-2.ttf') format('truetype'),  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        
   }
