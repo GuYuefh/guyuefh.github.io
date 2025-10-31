@@ -51,14 +51,14 @@ function createtime() {
     // 拼接新功能内容到HTML
     let c = "";
     c = s < 18 && s >= 9 
-        ? `<img class='boardsign' src='https://img.shields.io/badge/糖果屋-营业中-6adea8?style=social&logo=cakephp' title='什么时候能够实现财富自由呀~'><br> 
+        ? `<img class='boardsign' src='https://img.shields.io/badge/gyの屋-营业中-6adea8?style=social&logo=cakephp' title='什么时候能够实现财富自由呀~'><br> 
            <div style="font-size:13px;font-weight:bold">
                本站运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i><br>
                今天是 ${todayStr}<br>
                洛天依出道的第 ${luoTianyiDays} 天<br>
                初音未来出道的第 ${hatsuneMikuDays} 天<br>
            </div>`
-        : `<img class='boardsign' src='https://img.shields.io/badge/糖果屋-打烊了-6adea8?style=social&logo=coffeescript' title='下班了就该开开心心地玩耍~'><br> 
+        : `<img class='boardsign' src='https://img.shields.io/badge/gyの屋-打烊了-6adea8?style=social&logo=coffeescript' title='下班了就该开开心心地玩耍~'><br> 
            <div style="font-size:13px;font-weight:bold">
                本站运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i><br>
                今天是 ${todayStr}<br>
