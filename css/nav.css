@@ -1,0 +1,87 @@
+/* ====== 导航栏基础结构：确保垂直完全对齐 ====== */
+#nav {
+  display: flex;
+  align-items: center;   /* 子元素垂直居中 */
+  position: relative;
+  height: 44px;
+  overflow: visible !important; /* 允许下划线显示在下方 */
+}
+
+/* 菜单栏居中 + 垂直对齐 */
+#nav .menus_items {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  height: 44px;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* 站点名保持 44px 行高 */
+#blog-info .nav-site-title,
+#blog-info .site-name {
+  line-height: 44px !important;
+}
+
+/* 文章标题（初始隐藏） */
+.nav-post-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 600;
+  max-width: 60vw;
+  white-space: nowrap;
+  overflow: visible !important;
+  text-overflow: ellipsis;
+  line-height: 44px;
+  display: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity .25s ease, transform .25s ease, color .25s ease;
+  color: inherit;
+}
+
+/* 下滑时显示标题，菜单淡出  */
+.nav-visible .nav-post-title {
+  display: inline-block !important;
+  opacity: 1;
+  transform: translate(-50%, -2px);
+}
+
+.nav-visible #nav .menus_items {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+}
+
+/*文章标题下划线效果*/
+.nav-post-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;              /* 下划线距离标题，可微调 */
+  width: 100%;                /* 下划线长度 */
+  height: 4px;               /* 下划线粗细 */
+  background-color: #80C8F8; /* 浅蓝色条 */
+  border-radius: 6px;        /* 圆角柔和 */
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: left;  /* 从左侧开始伸展 */
+  transition: transform .25s ease;
+}
+
+/* 悬停展开下划线 + 标题变色 */
+.nav-post-title:hover {
+  color: #49B1F5; /* 悬停标题颜色 */
+}
+
+.nav-post-title:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* （可选）菜单 hover 下划线更柔和，可保留或删除 */
+#nav .menus_item a::after {
+  border-radius: 4px !important;
+}
